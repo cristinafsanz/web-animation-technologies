@@ -127,6 +127,8 @@
     <div class="box" style="background-color: rgb(86, 5, 99); transform: translate(200px, 0px) rotate(90deg);"></div>
     ```
 
+- Complete example in [Home.vue](https://github.com/cristinafsanz/web-animation-technologies/blob/master/gsap/vue-gsap-3/src/views/Home.vue)
+
 - Greensock Ease visualizer: https://greensock.com/docs/v3/Eases
 
 - Deploy project:
