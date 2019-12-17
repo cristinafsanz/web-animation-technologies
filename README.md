@@ -42,6 +42,8 @@
 
 ### Project Vue and GSAP 3
 
+- [Demo](https://cristinafsanz.github.io/web-animation-technologies/gsap/vue-gsap-3/dist/#/)
+
 - Create Vue Project
 
     ```
@@ -126,5 +128,27 @@
     ```
 
 - Greensock Ease visualizer: https://greensock.com/docs/v3/Eases
+
+- Deploy project:
+
+    - Create file `vue.config.js` in root Vue project:
+
+        ```
+        module.exports = {
+            baseUrl: process.env.NODE_ENV === 'production' ? '/web-animation-technologies/gsap/vue-gsap-3/' : '/'
+        }
+        ```
+
+    - Generate dist files:
+
+        ```
+        npm run build
+        ```
+
+    - Add dist files to git (remove `dist/` from `.gitignore`) and push to master
+
+    - Enable GitHub Pages in settings
+
+    - Project deployed in https://cristinafsanz.github.io/web-animation-technologies/gsap/vue-gsap-3/dist/#/
 
 
