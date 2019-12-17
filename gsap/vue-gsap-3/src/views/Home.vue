@@ -13,8 +13,8 @@
     </div>
 
     <button type="button" @click="runAnimations()">Run animation</button>
-    <button type="button" id="pause-circles" @click="pauseCircles()">Pause</button>
-    <button type="button" id="play-circles" @click="playCircles()">Play</button>
+    <button type="button" id="pause-circles" @click="pauseCircles()">Pause circles</button>
+    <button type="button" id="play-circles" @click="playCircles()">Play circles</button>
   </div>
 </template>
 
