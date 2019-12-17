@@ -153,4 +153,12 @@
 
     - Project deployed in https://cristinafsanz.github.io/web-animation-technologies/gsap/vue-gsap-3/dist/#/
 
+### Project Vue and GSAP 3
+
+- [JavaScript WinWheel](https://github.com/zarocknz/javascript-winwheel)
+
+- [Demo](https://cristinafsanz.github.io/web-animation-technologies/gsap/vue-gsap-3/dist/#/javascript-winwheel)
+
+    - Imported and changed a little `Winwheel.js`.
+
 
