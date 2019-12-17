@@ -153,7 +153,7 @@
 
     - Project deployed in https://cristinafsanz.github.io/web-animation-technologies/gsap/vue-gsap-3/dist/#/
 
-### Project Vue and GSAP 3
+### Project Vue and WinWheel (internally GSAP)
 
 - [JavaScript WinWheel](https://github.com/zarocknz/javascript-winwheel)
 
