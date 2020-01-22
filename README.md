@@ -37,6 +37,7 @@
 
 ## GSAP 3
 - Getting started with GSAP 3: https://greensock.com/get-started/
+- How to animate on the web with Greensock: https://css-tricks.com/how-to-animate-on-the-web-with-greensock/
 - New features of GSAP 3: https://tympanus.net/codrops/2019/11/14/the-new-features-of-gsap-3/
 - Vue.js and GSAP: https://blog.usejournal.com/vue-js-gsap-animations-26fc6b1c3c5a
 
@@ -161,4 +162,134 @@
 
     - Imported and changed a little `Winwheel.js`.
 
+### Timeline
+
+Explanation in https://css-tricks.com/how-to-animate-on-the-web-with-greensock/.
+
+To avoid having a delay until the second animation, like this:
+
+```
+gsap.to('.ball', {
+  duration: 1.5,
+  x: 200,
+  scale: 2,
+  ease: 'bounce'
+})
+
+gsap.to('.ball', {
+  duration: 1.5,
+  delay: 1.5,
+  x: 0,
+  scale: 1,
+  ease: 'back.inOut(3)'
+})
+```
+
+We using timeline:
+
+```
+gsap
+  .timeline()
+  .to(‘.ball’, {
+    duration: 1.5,
+    x: 200,
+    scale: 2,
+    ease: "bounce"
+  })
+  .to(‘.ball’, {
+    duration: 1.5,
+    x: 0,
+    scale: 1,
+    ease: "back.inOut(3)"
+  });
+```
+
+This instantiates a timeline and then chains the two animations off of it.
+
+Or with a default value for duration:
+
+```
+gsap
+  .timeline({
+    defaults: {
+      duration: 1.5
+    }
+  })
+  .to('.ball', {
+    x: 200,
+    scale: 2,
+    ease: "bounce"
+  })
+  .to('.ball', {
+    x: 0,
+    scale: 1,
+    ease: "back.inOut(3)"
+  });
+```
+
+- For loops, use `repeat: -1`:
+
+```
+gsap
+  .timeline({
+    repeat: -1,
+    defaults: {
+      duration: 1.5
+    }
+  })
+  .to('.ball', {
+    x: 200,
+    scale: 2,
+    ease: "bounce"
+  })
+  .to('.ball', {
+    x: 0,
+    scale: 1,
+    ease: "back.inOut(3)"
+  })
+  .to('.ball', {
+    x: -200,
+    scale: 2,
+    ease: "bounce"
+  })
+  .to('.ball', {
+    x: 0,
+    scale: 1,
+    ease: "back.inOut(3)"
+  });
+```
+
+### Cool examples with GSAP
+
+- Click on the bell: https://codepen.io/sdras/pen/LYELqPX
+
+- To better understand it, I created a project in [gsap/css-tricks-article/label](https://cristinafsanz.github.io/web-animation-technologies/gsap/css-tricks-article/label), [downloading the gsap.min.js](https://greensock.com/docs/v3/Installation).
+
+Labels (like `start` in the example) make sure things fire off at a particular point in time in the playhead of the animation. We can even increment and decrement from the label. I actually do this a lot in my animations. It looks like this:
+`start+=0.25`.
+
+```
+gsap
+    .timeline({
+        defaults: {
+            duration: 1.5
+        }
+    })
+    .add('start')
+    .to('.ball', {
+        x: 300,
+        scale: 2,
+        ease: "bounce"
+    }, 'start')
+    .to('.ball2', {
+        x: 300,
+        scale: 2,
+        ease: "bounce"
+    }, 'start+=0.25')
+    .to('.ball3', {
+        x: 300,
+        scale: 2,
+        ease: "bounce"
+    }, 'start+=0.5')
+```
 

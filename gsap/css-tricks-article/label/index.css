@@ -1,0 +1,31 @@
+body {
+  background: #dddddd;
+  display: flex;
+  width: 99vw;
+  height: 99vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.ball1 {
+    background: #db8a74;
+}
+
+.ball2 {
+  background: #cc2244;
+}
+
+.ball3 {
+  background: #454545;
+}
+
+.source {
+    margin-top: 70px;
+    font-size: 18px;
+}
