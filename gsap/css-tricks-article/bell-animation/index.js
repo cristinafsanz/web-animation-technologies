@@ -54,7 +54,7 @@ Some elements increment and decrement from the label.
 */
 bellTL.add('bell')
 
-// To complete the circle when the top part disappears?
+// To put a mask to have space between the circle and the bell?
 bellTL.to('.rectmask', {
     scaleY: 1.5,
     transformOrigin: '50% 100%',
