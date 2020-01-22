@@ -1,0 +1,69 @@
+body {
+  background: #333;
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  margin: 20px;
+  display: -webkit-box;
+  display: flex;
+  font-size: 14px;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+main {
+  width: 350px;
+  height: 700px;
+  position: absolute;
+  background: #eee;
+  border-radius: 50px;
+  border: 15px solid black;
+  overflow: hidden;
+}
+main .iphonetop {
+  width: 60%;
+  margin-left: 70px;
+  margin-top: -2px;
+}
+
+h1, h3, h3 {
+  font-weight: 900;
+}
+
+h2 {
+  margin: 10px 0 20px;
+  font-size: 26px;
+}
+
+.home-img {
+  padding: 0 30px;
+  position: relative;
+}
+
+.cls-1 {
+  fill: #4d4d4d;
+}
+
+.bellfull {
+  width: 60px;
+  height: 60px;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+.bellgroup {
+  fill: #777;
+}
+
+.bloop {
+  fill: none;
+  stroke: #777;
+  opacity: 0;
+}
+
+.xline1, .xline2 {
+  stroke-width: 15px;
+  stroke: #777;
+  stroke-linecap: round;
+  visibility: hidden;
+}

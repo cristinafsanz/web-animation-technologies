@@ -261,9 +261,13 @@ gsap
 
 ### Cool examples with GSAP
 
-- Click on the bell: https://codepen.io/sdras/pen/LYELqPX
+#### Click on the bell:
 
-- To better understand it, I created a project in [gsap/css-tricks-article/label](https://cristinafsanz.github.io/web-animation-technologies/gsap/css-tricks-article/label/index.html), [downloading the gsap.min.js](https://greensock.com/docs/v3/Installation).
+- Codepen Sarah Draner: https://codepen.io/sdras/pen/LYELqPX
+
+- Demo extracted from codepen with only bell animation: https://cristinafsanz.github.io/web-animation-technologies/gsap/css-tricks-article/bell-animation/index.html
+
+To better understand it, I created first a project with a previous example in [gsap/css-tricks-article/label](https://cristinafsanz.github.io/web-animation-technologies/gsap/css-tricks-article/label/index.html), [downloading the gsap.min.js](https://greensock.com/docs/v3/Installation).
 
 Labels (like `start` in the example) make sure things fire off at a particular point in time in the playhead of the animation. We can even increment and decrement from the label. I actually do this a lot in my animations. It looks like this:
 `start+=0.25`.
